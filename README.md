@@ -1,0 +1,1 @@
+Repository containing blogs I will be writing to document my journey in summer of Bitcoin program.
