@@ -17,23 +17,77 @@
             --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
+        /* Dark mode variables */
+        .dark-mode {
+            --primary-color: #FF9900;
+            --secondary-color: #BBBBBB;
+            --background-color: #121212;
+            --text-color: #E0E0E0;
+            --accent-color: #F7931A;
+            --light-gray: #2A2A2A;
+            --dark-gray: #1A1A1A;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: var(--background-color);       
+            background-color: var(--background-color);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Decorative spots */
+        .spot {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--primary-color);
+            opacity: 0.1;
+            z-index: -1;
+            filter: blur(15px);
+        }
+
+        .spot-1 {
+            width: 150px;
+            height: 150px;
+            top: 20%;
+            left: -50px;
+        }
+
+        .spot-2 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            right: -70px;
+        }
+
+        .spot-3 {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 10%;
+        }
+
+        .spot-4 {
+            width: 180px;
+            height: 180px;
+            bottom: 30%;
+            right: 5%;
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
         }
         
         header {
@@ -59,6 +113,31 @@
             background-repeat: repeat;
             opacity: 0.3;
         }
+
+        /* Dark mode toggle */
+        #dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        #dark-mode-toggle:hover {
+            transform: scale(1.1);
+        }
         
         h1 {
             font-size: 2.5rem;
@@ -75,11 +154,24 @@
         }
         
         section {
-            background-color: white;
+            background-color: var(--background-color);
             padding: 30px;
             margin-bottom: 30px;
             border-radius: 8px;
             box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Bitcoin symbol decoration */
+        .bitcoin-symbol {
+            position: absolute;
+            bottom: -30px;
+            right: -20px;
+            font-size: 100px;
+            color: var(--primary-color);
+            opacity: 0.05;
+            transform: rotate(-15deg);
         }
         
         h2 {
@@ -158,11 +250,25 @@
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
         .challenge-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .challenge-item::before {
+            content: '{ }';
+            position: absolute;
+            bottom: -20px;
+            right: 10px;
+            font-size: 80px;
+            font-weight: bold;
+            opacity: 0.05;
+            color: var(--primary-color);
         }
         
         .challenge-item h3 {
@@ -171,19 +277,39 @@
         }
         
         .highlight {
-            background-color: #FFF7E6;
+            background-color: var(--light-gray);
             border-left: 4px solid var(--primary-color);
             padding: 15px;
             margin: 25px 0;
+            position: relative;
+        }
+
+        .highlight::after {
+            content: '✨';
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            font-size: 24px;
         }
         
         .quote {
             font-style: italic;
             font-size: 1.1rem;
             padding: 20px;
-            background-color: #FAFAFA;
+            background-color: var(--light-gray);
             border-left: 4px solid var(--primary-color);
             margin: 20px 0;
+            position: relative;
+        }
+
+        .quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.2;
         }
         
         .btn {
@@ -194,19 +320,40 @@
             border-radius: 30px;
             text-decoration: none;
             margin-top: 15px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
         .btn:hover {
             background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
         
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
             background-color: var(--dark-gray);
             color: white;
             border-radius: 8px;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         
         .social-links {
@@ -217,11 +364,35 @@
             color: white;
             margin: 0 10px;
             font-size: 1.5rem;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .social-links a:hover {
             color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Fun animation for links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        a:not(.btn):not(.social-links a)::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        a:not(.btn):not(.social-links a):hover::after {
+            width: 100%;
         }
         
         @media (max-width: 768px) {
@@ -243,10 +414,55 @@
                 left: 21px;
                 right: auto;
             }
+
+            #dark-mode-toggle {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Animation for the spots */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .spot {
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .spot-2 {
+            animation-delay: 2s;
+        }
+
+        .spot-3 {
+            animation-delay: 4s;
+        }
+
+        .spot-4 {
+            animation-delay: 6s;
         }
     </style>
 </head>
 <body>
+    <!-- Decorative spots -->
+    <div class="spot spot-1"></div>
+    <div class="spot spot-2"></div>
+    <div class="spot spot-3"></div>
+    <div class="spot spot-4"></div>
+
+    <!-- Dark mode toggle -->
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <div class="container">
         <header>
             <h1>My Summer of Bitcoin Journey</h1>
@@ -257,18 +473,21 @@
             <h2><i class="fas fa-user"></i> Who Am I</h2>
             <p>I am Gautam Manchandani, currently a CS sophomore student at BITS Pilani, India. I've been exploring the open source world for about 8 months now, diving deep into various technologies and contributing to different projects.</p>
             <p>My journey in open source began with participating in events like Hacktoberfest and Winter of Blockchain, which fueled my passion for collaborative development and blockchain technology.</p>
+            <div class="bitcoin-symbol"><i class="fab fa-bitcoin"></i></div>
         </section>
         
         <section id="what-is-sob">
             <h2><i class="fas fa-info-circle"></i> What is Summer of Bitcoin?</h2>
-            <p>Summer of Bitcoin (SoB) is a global program focused on bringing more student developers into open source software development within the Bitcoin community. Students work with an open-source organization on a 12-week programming project during their summer break from school.</p>
+            <p><a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin (SoB)</a> is a global program focused on bringing more student developers into open source software development within the Bitcoin community. Students work with an open-source organization on a 12-week programming project during their summer break from school.</p>
             <p>The program provides a unique opportunity to learn from experienced Bitcoin developers while contributing meaningfully to the Bitcoin ecosystem. It's similar to Google Summer of Code but specifically focused on Bitcoin development.</p>
+            <div class="bitcoin-symbol"><i class="fas fa-code"></i></div>
         </section>
         
         <section id="discovery">
             <h2><i class="fas fa-lightbulb"></i> How I Got to Know About SoB</h2>
-            <p>After my enriching experiences with Hacktoberfest and Winter of Blockchain during my first year of college, I was eager to find more open source programs similar to GSoC. That's when I discovered Summer of Bitcoin - a perfect blend of my interests in open source contribution and blockchain technology.</p>
+            <p>After my enriching experiences with Hacktoberfest and Winter of Blockchain during my first year of college, I was eager to find more open source programs similar to GSoC. That's when I discovered <a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin</a> - a perfect blend of my interests in open source contribution and blockchain technology.</p>
             <p>The program immediately caught my attention due to its focus on Bitcoin development and the opportunity to work with experienced mentors in the field. The possibility of diving deep into Bitcoin's technical aspects while contributing to real-world projects was exactly what I was looking for.</p>
+            <div class="bitcoin-symbol"><i class="fas fa-search"></i></div>
         </section>
         
         <section id="application">
@@ -323,16 +542,17 @@
             <div class="highlight">
                 <p><strong>Fun fact:</strong> While simultaneously preparing for GSoC, I managed to complete all four challenges in just 3 days! It was a mix of hard work, luck, and assistance from LLMs (as I was new to Bitcoin development).</p>
             </div>
+            <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
         </section>
         
         <section id="proposal">
             <h2><i class="fas fa-file-alt"></i> Organization Selection and Proposal Process</h2>
             <p>After completing the challenges, the proposal round began. This year featured more organizations than previous years, which made the selection process both exciting and challenging.</p>
-            <p>It took me about 4-5 days to thoroughly review all available projects before making my decision. I ultimately chose <strong>Shopstr</strong> - a Nostr-based marketplace client designed to enable private, peer-to-peer transactions using Bitcoin.</p>
+            <p>It took me about 4-5 days to thoroughly review all available projects before making my decision. I ultimately chose <strong><a href="https://shopstr.store/" target="_blank">Shopstr</a></strong> - a Nostr-based marketplace client designed to enable private, peer-to-peer transactions using Bitcoin.</p>
             
             <h3>Why I Chose Shopstr:</h3>
             <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li>The mentor was exceptionally helpful and responsive</li>
+                <li>The mentor, <a href="https://github.com/calvadev" target="_blank">calvadev</a>, was exceptionally helpful and responsive</li>
                 <li>I was able to establish a strong connection with the team</li>
                 <li>The mentor patiently answered my questions and provided valuable resources</li>
                 <li>The project aligned well with my technical interests and skill set</li>
@@ -345,6 +565,7 @@
             <div class="quote">
                 <p>"May 5th was the date results were announced, and boom! My proposal got accepted!"</p>
             </div>
+            <div class="bitcoin-symbol"><i class="fas fa-file-signature"></i></div>
         </section>
         
         <section id="results">
@@ -357,7 +578,7 @@
             </div>
             
             <h3>My Project: Payment Escrow and Processing</h3>
-            <p>I'll be working on improving Shopstr's payment and order processing system. Currently, Shopstr handles payments and orders manually, requiring buyers to trust merchants and merchants to be online to handle orders. My project aims to reduce risks associated with transacting with pseudonymous merchants while streamlining order processing.</p>
+            <p>I'll be working on improving <a href="https://shopstr.store/" target="_blank">Shopstr's</a> payment and order processing system. Currently, Shopstr handles payments and orders manually, requiring buyers to trust merchants and merchants to be online to handle orders. My project aims to reduce risks associated with transacting with pseudonymous merchants while streamlining order processing.</p>
             
             <div class="challenge-item">
                 <h3>Expected Outcomes</h3>
@@ -382,12 +603,17 @@
             <ul style="margin-left: 20px; margin-bottom: 20px;">
                 <li>Gain hands-on experience with Bitcoin development</li>
                 <li>Contribute to a real-world project with real users</li>
-                <li>Work closely with experienced mentors</li>
+                <li>Work closely with experienced mentors like <a href="https://github.com/calvadev" target="_blank">calvadev</a></li>
                 <li>Further develop my technical and collaboration skills</li>
             </ul>
             
-            <p>For those interested in learning more about my project or seeking guidance for future applications, you can check out my accepted proposal here:</p>
-            <a href="https://github.com/GautamBytes/SOB-ACCEPTED-PROPOSAL" class="btn" target="_blank">View My Accepted Proposal</a>
+            <p>For those interested in learning more about my project or seeking guidance for future applications, check out these resources:</p>
+            
+            <div class="btn-group">
+                <a href="https://github.com/GautamBytes/SOB-ACCEPTED-PROPOSAL" class="btn" target="_blank">View My Accepted Proposal</a>
+                <a href="https://shopstr.store/" class="btn" target="_blank">Visit Shopstr</a>
+                <a href="https://www.summerofbitcoin.org/" class="btn" target="_blank">Summer of Bitcoin</a>
+            </div>
             
             <div class="highlight">
                 <h3>Advice for Future Applicants:</h3>
@@ -400,16 +626,52 @@
                     <li>Craft a detailed and well-thought-out proposal</li>
                 </ul>
             </div>
+            <div class="bitcoin-symbol"><i class="fas fa-award"></i></div>
         </section>
         
         <footer>
-            <p>© 2025 Gautam Manchandani | Summer of Bitcoin Participant</p>
+            <p>© 2025 Gautam Manchandani | <a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin</a> Participant</p>
             <div class="social-links">
-                <a href="https://github.com/GautamBytes"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/gautam-manchandani/"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/GautamM96"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/GautamBytes" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gautam-manchandani/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/GautamM96" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </footer>
     </div>
+
+    <!-- Dark mode toggle script -->
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        const icon = darkModeToggle.querySelector('i');
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Save preference to localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Add floating animation to Bitcoin symbols for extra funkiness
+        const bitcoinSymbols = document.querySelectorAll('.bitcoin-symbol');
+        bitcoinSymbols.forEach((symbol, index) => {
+            symbol.style.animationDelay = `${index * 2}s`;
+        });
+    </script>
 </body>
 </html>
