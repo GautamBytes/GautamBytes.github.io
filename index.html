@@ -16,440 +16,524 @@
             --dark-gray: #333;
             --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        /* Dark mode variables */
-        .dark-mode {
-            --primary-color: #FF9900;
-            --secondary-color: #BBBBBB;
-            --background-color: #121212;
-            --text-color: #E0E0E0;
-            --accent-color: #F7931A;
-            --light-gray: #2A2A2A;
-            --dark-gray: #1A1A1A;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            position: relative;
-            overflow-x: hidden;
-        }
+       
+    /* Dark mode variables */
+    .dark-mode {
+        --primary-color: #FF9900;
+        --secondary-color: #BBBBBB;
+        --background-color: #121212;
+        --text-color: #E0E0E0;
+        --accent-color: #F7931A;
+        --light-gray: #2A2A2A;
+        --dark-gray: #1A1A1A;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+   
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        position: relative;
+        overflow-x: hidden;
+    }
 
-        /* Decorative spots */
-        .spot {
-            position: absolute;
-            border-radius: 50%;
-            background: var(--primary-color);
-            opacity: 0.1;
-            z-index: -1;
-            filter: blur(15px);
-        }
+    /* Decorative spots */
+    .spot {
+        position: absolute;
+        border-radius: 50%;
+        background: var(--primary-color);
+        opacity: 0.1;
+        z-index: -1;
+        filter: blur(15px);
+    }
 
-        .spot-1 {
-            width: 150px;
-            height: 150px;
-            top: 20%;
-            left: -50px;
-        }
+    .spot-1 {
+        width: 150px;
+        height: 150px;
+        top: 20%;
+        left: -50px;
+    }
 
-        .spot-2 {
-            width: 200px;
-            height: 200px;
-            top: 50%;
-            right: -70px;
-        }
+    .spot-2 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        right: -70px;
+    }
 
-        .spot-3 {
-            width: 120px;
-            height: 120px;
-            bottom: 15%;
-            left: 10%;
-        }
+    .spot-3 {
+        width: 120px;
+        height: 120px;
+        bottom: 15%;
+        left: 10%;
+    }
 
-        .spot-4 {
-            width: 180px;
-            height: 180px;
-            bottom: 30%;
-            right: 5%;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary-color), #FFB347);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: var(--box-shadow);
-        }
-        
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M61.8,28.9c-0.7-2.9-3.3-3.6-7-3.6V20h-3.6v5.1c-1,0-1.9,0-2.9,0V20h-3.6v5.3h-2.3l-4.9,0v3.9c0,0,2.7-0.1,2.6,0c1.5,0,2,0.5,2.1,1.2v10.4c0.1,0,0.1,0.1,0.1,0.1c-0.1,0-0.1,0.1-0.1,0.1v14.5c-0.1,0.4-0.4,0.8-1.1,0.8c0.1,0.1-2.6,0-2.6,0l-0.9,4.3h4.8v5.4h3.6v-5.3c1,0,1.9,0,2.9,0v5.3h3.6v-5.4c5-0.3,8.5-1.5,9-6.1c0.4-3.7-1.4-5.4-4.2-6.1c1.7-0.8,3-2.2,2.7-5.2V28.9z M55.2,49.9c0,3.7-6.4,3.3-8.4,3.3V46.6C48.8,46.6,55.2,46,55.2,49.9z M53.9,33.9c0,3.4-5.3,3-7.1,3v-6C48.6,30.9,53.9,30.3,53.9,33.9z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            opacity: 0.3;
-        }
+    .spot-4 {
+        width: 180px;
+        height: 180px;
+        bottom: 30%;
+        right: 5%;
+    }
+   
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+    }
+   
+    header {
+        background: linear-gradient(135deg, var(--primary-color), #FFB347);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        box-shadow: var(--box-shadow);
+    }
+   
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M61.8,28.9c-0.7-2.9-3.3-3.6-7-3.6V20h-3.6v5.1c-1,0-1.9,0-2.9,0V20h-3.6v5.3h-2.3l-4.9,0v3.9c0,0,2.7-0.1,2.6,0c1.5,0,2,0.5,2.1,1.2v10.4c0.1,0,0.1,0.1,0.1,0.1c-0.1,0-0.1,0.1-0.1,0.1v14.5c-0.1,0.4-0.4,0.8-1.1,0.8c0.1,0.1-2.6,0-2.6,0l-0.9,4.3h4.8v5.4h3.6v-5.3c1,0,1.9,0,2.9,0v5.3h3.6v-5.4c5-0.3,8.5-1.5,9-6.1c0.4-3.7-1.4-5.4-4.2-6.1c1.7-0.8,3-2.2,2.7-5.2V28.9z M55.2,49.9c0,3.7-6.4,3.3-8.4,3.3V46.6C48.8,46.6,55.2,46,55.2,49.9z M53.9,33.9c0,3.4-5.3,3-7.1,3v-6C48.6,30.9,53.9,30.3,53.9,33.9z' fill='%23ffffff' fill-opacity='0.1'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        opacity: 0.3;
+    }
 
-        /* Dark mode toggle */
-        #dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 100;
-            box-shadow: var(--box-shadow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
+    /* Dark mode toggle */
+    #dark-mode-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 100;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
 
-        #dark-mode-toggle:hover {
-            transform: scale(1.1);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        section {
-            background-color: var(--background-color);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: var(--box-shadow);
-            position: relative;
-            overflow: hidden;
-        }
+    #dark-mode-toggle:hover {
+        transform: scale(1.1);
+        background-color: var(--accent-color);
+    }
+   
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+    }
+   
+    .subtitle {
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+    }
+   
+    section {
+        background-color: var(--background-color);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: var(--box-shadow);
+        position: relative;
+        overflow: hidden;
+        animation: fadeIn 0.5s ease-in-out;
+    }
 
-        /* Bitcoin symbol decoration */
-        .bitcoin-symbol {
-            position: absolute;
-            bottom: -30px;
-            right: -20px;
-            font-size: 100px;
-            color: var(--primary-color);
-            opacity: 0.05;
-            transform: rotate(-15deg);
-        }
-        
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--light-gray);
-            padding-bottom: 10px;
-            font-size: 1.8rem;
-        }
-        
-        p {
-            margin-bottom: 20px;
-        }
-        
-        .timeline {
-            position: relative;
-            margin: 40px 0;
-        }
-        
+    /* Fade-in animation for sections */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Bitcoin symbol decoration */
+    .bitcoin-symbol {
+        position: absolute;
+        bottom: -30px;
+        right: -20px;
+        font-size: 100px;
+        color: var(--primary-color);
+        opacity: 0.05;
+        transform: rotate(-15deg);
+    }
+   
+    h2 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--light-gray);
+        padding-bottom: 10px;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+   
+    p {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+   
+    .timeline {
+        position: relative;
+        margin: 40px 0;
+    }
+   
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+        transition: background 0.3s ease;
+    }
+   
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+    }
+   
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        background-color: var(--primary-color);
+        border: 4px solid var(--accent-color);
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+   
+    .timeline-item.left {
+        left: 0;
+    }
+   
+    .timeline-item.right {
+        left: 50%;
+    }
+   
+    .timeline-item.right::after {
+        left: -10px;
+    }
+   
+    .timeline-content {
+        padding: 20px;
+        background-color: var(--light-gray);
+        position: relative;
+        border-radius: 6px;
+        box-shadow: var(--box-shadow);
+    }
+   
+    .timeline-content h3 {
+        margin-bottom: 10px;
+        color: var(--secondary-color);
+        font-size: 1.4rem;
+    }
+   
+    .challenge-item {
+        background-color: var(--light-gray);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+   
+    .challenge-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .challenge-item::before {
+        content: '{ }';
+        position: absolute;
+        bottom: -20px;
+        right: 10px;
+        font-size: 80px;
+        font-weight: bold;
+        opacity: 0.05;
+        color: var(--primary-color);
+    }
+   
+    .challenge-item h3 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+   
+    .highlight {
+        background-color: var(--light-gray);
+        border-left: 4px solid var(--primary-color);
+        padding: 15px;
+        margin: 25px 0;
+        position: relative;
+    }
+
+    .highlight::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        font-size: 24px;
+    }
+   
+    .quote {
+        font-style: italic;
+        font-size: 1.1rem;
+        padding: 20px;
+        background-color: var(--light-gray);
+        border-left: 4px solid var(--primary-color);
+        margin: 20px 0;
+        position: relative;
+    }
+
+    .quote::before {
+        content: '"';
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        font-size: 60px;
+        color: var(--primary-color);
+        opacity: 0.2;
+    }
+   
+    .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-top: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-weight: 500;
+    }
+   
+    .btn:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-3px);
+        box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+   
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: var(--dark-gray);
+        color: white;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+   
+    .social-links {
+        margin-top: 20px;
+    }
+   
+    .social-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+   
+    .social-links a:hover {
+        color: var(--primary-color);
+        transform: translateY(-3px);
+    }
+
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    a:not(.btn):not(.social-links a)::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+
+    a:not(.btn):not(.social-links a):hover::after {
+        width: 100%;
+    }
+   
+    .image-caption {
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--secondary-color);
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
         .timeline::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--light-gray);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
+            left: 31px;
         }
-        
+       
         .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
         }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--primary-color);
-            border: 4px solid var(--accent-color);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .timeline-item.left {
+       
+        .timeline-item.right {
             left: 0;
         }
-        
-        .timeline-item.right {
-            left: 50%;
-        }
-        
-        .timeline-item.right::after {
-            left: -10px;
-        }
-        
-        .timeline-content {
-            padding: 20px;
-            background-color: var(--light-gray);
-            position: relative;
-            border-radius: 6px;
-        }
-        
-        .timeline-content h3 {
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-        
-        .challenge-item {
-            background-color: var(--light-gray);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .challenge-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+       
+        .timeline-item::after {
+            left: 21px;
+            right: auto;
         }
 
-        .challenge-item::before {
-            content: '{ }';
-            position: absolute;
-            bottom: -20px;
-            right: 10px;
-            font-size: 80px;
-            font-weight: bold;
-            opacity: 0.05;
-            color: var(--primary-color);
-        }
-        
-        .challenge-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .highlight {
-            background-color: var(--light-gray);
-            border-left: 4px solid var(--primary-color);
-            padding: 15px;
-            margin: 25px 0;
-            position: relative;
-        }
-
-        .highlight::after {
-            content: '✨';
-            position: absolute;
-            top: -10px;
-            right: 10px;
-            font-size: 24px;
-        }
-        
-        .quote {
-            font-style: italic;
-            font-size: 1.1rem;
-            padding: 20px;
-            background-color: var(--light-gray);
-            border-left: 4px solid var(--primary-color);
-            margin: 20px 0;
-            position: relative;
-        }
-
-        .quote::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 10px;
-            font-size: 60px;
-            color: var(--primary-color);
-            opacity: 0.2;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .btn:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
-            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+        #dark-mode-toggle {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
         }
 
         .btn-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: var(--dark-gray);
-            color: white;
-            border-radius: 8px;
-            position: relative;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        footer::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
+        .tabs {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tab-button {
             width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            margin: 5px 0;
         }
-        
-        .social-links {
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
+    }
 
-        /* Fun animation for links */
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            position: relative;
-            transition: all 0.3s ease;
-        }
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
 
-        a:not(.btn):not(.social-links a)::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease;
-        }
+    .spot {
+        animation: float 8s ease-in-out infinite;
+    }
 
-        a:not(.btn):not(.social-links a):hover::after {
-            width: 100%;
-        }
-        
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item.right {
-                left: 0;
-            }
-            
-            .timeline-item::after {
-                left: 21px;
-                right: auto;
-            }
+    .spot-2 {
+        animation-delay: 2s;
+    }
 
-            #dark-mode-toggle {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
+    .spot-3 {
+        animation-delay: 4s;
+    }
 
-            .btn-group {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
+    .spot-4 {
+        animation-delay: 6s;
+    }
 
-        /* Animation for the spots */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
 
-        .spot {
-            animation: float 8s ease-in-out infinite;
-        }
+    .tab-button {
+        background-color: var(--light-gray);
+        border: none;
+        padding: 12px 24px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s ease;
+    }
 
-        .spot-2 {
-            animation-delay: 2s;
-        }
+    .tab-button:hover {
+        background-color: var(--accent-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        .spot-3 {
-            animation-delay: 4s;
-        }
+    .tab-button.active {
+        background-color: var(--primary-color);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
 
-        .spot-4 {
-            animation-delay: 6s;
-        }
-    </style>
+    .tab-content {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .tab-content.active {
+        display: block;
+        opacity: 1;
+    }
+
+    pre {
+        background-color: var(--light-gray);
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    code {
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
 </head>
 <body>
     <!-- Decorative spots -->
@@ -468,167 +552,335 @@
             <h1>My Summer of Bitcoin Journey</h1>
             <p class="subtitle">A Developer's Path into Bitcoin Open Source Development</p>
         </header>
-        
-        <section id="about">
-            <h2><i class="fas fa-user"></i> Who Am I</h2>
-            <p>I am Gautam Manchandani, currently a CS sophomore student at BITS Pilani, India. I've been exploring the open source world for about 8 months now, diving deep into various technologies and contributing to different projects.</p>
-            <p>My journey in open source began with participating in events like Hacktoberfest and Winter of Blockchain, which fueled my passion for collaborative development and blockchain technology.</p>
-            <div class="bitcoin-symbol"><i class="fab fa-bitcoin"></i></div>
-        </section>
-        
-        <section id="what-is-sob">
-            <h2><i class="fas fa-info-circle"></i> What is Summer of Bitcoin?</h2>
-            <p><a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin (SoB)</a> is a global program focused on bringing more student developers into open source software development within the Bitcoin community. Students work with an open-source organization on a 12-week programming project during their summer break from school.</p>
-            <p>The program provides a unique opportunity to learn from experienced Bitcoin developers while contributing meaningfully to the Bitcoin ecosystem. It's similar to Google Summer of Code but specifically focused on Bitcoin development.</p>
-            <div class="bitcoin-symbol"><i class="fas fa-code"></i></div>
-        </section>
-        
-        <section id="discovery">
-            <h2><i class="fas fa-lightbulb"></i> How I Got to Know About SoB</h2>
-            <p>After my enriching experiences with Hacktoberfest and Winter of Blockchain during my first year of college, I was eager to find more open source programs similar to GSoC. That's when I discovered <a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin</a> - a perfect blend of my interests in open source contribution and blockchain technology.</p>
-            <p>The program immediately caught my attention due to its focus on Bitcoin development and the opportunity to work with experienced mentors in the field. The possibility of diving deep into Bitcoin's technical aspects while contributing to real-world projects was exactly what I was looking for.</p>
-            <div class="bitcoin-symbol"><i class="fas fa-search"></i></div>
-        </section>
-        
-        <section id="application">
-            <h2><i class="fas fa-tasks"></i> Application Process and Challenges</h2>
-            <p>The application process for Summer of Bitcoin was intensive, spanning approximately 2.5 months with three distinct rounds:</p>
-            
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Round 1: Initial Application</h3>
-                        <p>This round involved submitting basic details like college name, open source experience, and motivation for joining the program. Generally, applicants with basic experience get selected in this round.</p>
+
+        <!-- Tabs navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('selection')">Selection Journey</button>
+            <button class="tab-button" onclick="openTab('midterm')">Mid-Term Evaluation</button>
+            <button class="tab-button" onclick="openTab('final')">Final Evaluation</button>
+            <button class="tab-button" onclick="openTab('goodies')">Internship Goodies</button>
+        </div>
+
+        <!-- Tab contents -->
+        <div id="selection" class="tab-content active">
+            <section id="about">
+                <h2><i class="fas fa-user"></i> Who Am I</h2>
+                <p>I am Gautam Manchandani, currently a CS sophomore student at BITS Pilani, India. I've been exploring the open source world for about 8 months now, diving deep into various technologies and contributing to different projects.</p>
+                <p>My journey in open source began with participating in events like Hacktoberfest and Winter of Blockchain, which fueled my passion for collaborative development and blockchain technology.</p>
+                <div class="bitcoin-symbol"><i class="fab fa-bitcoin"></i></div>
+            </section>
+           
+            <section id="what-is-sob">
+                <h2><i class="fas fa-info-circle"></i> What is Summer of Bitcoin?</h2>
+                <p><a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin (SoB)</a> is a global program focused on bringing more student developers into open source software development within the Bitcoin community. Students work with an open-source organization on a 12-week programming project during their summer break from school.</p>
+                <p>The program provides a unique opportunity to learn from experienced Bitcoin developers while contributing meaningfully to the Bitcoin ecosystem. It's similar to Google Summer of Code but specifically focused on Bitcoin development.</p>
+                <div class="bitcoin-symbol"><i class="fas fa-code"></i></div>
+            </section>
+           
+            <section id="discovery">
+                <h2><i class="fas fa-lightbulb"></i> How I Got to Know About SoB</h2>
+                <p>After my enriching experiences with Hacktoberfest and Winter of Blockchain during my first year of college, I was eager to find more open source programs similar to GSoC. That's when I discovered <a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin</a> - a perfect blend of my interests in open source contribution and blockchain technology.</p>
+                <p>The program immediately caught my attention due to its focus on Bitcoin development and the opportunity to work with experienced mentors in the field. The possibility of diving deep into Bitcoin's technical aspects while contributing to real-world projects was exactly what I was looking for.</p>
+                <div class="bitcoin-symbol"><i class="fas fa-search"></i></div>
+            </section>
+           
+            <section id="application">
+                <h2><i class="fas fa-tasks"></i> Application Process and Challenges</h2>
+                <p>The application process for Summer of Bitcoin was intensive, spanning approximately 2.5 months with three distinct rounds:</p>
+               
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>Round 1: Initial Application</h3>
+                            <p>This round involved submitting basic details like college name, open source experience, and motivation for joining the program. Generally, applicants with basic experience get selected in this round.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>Round 2: Technical Challenges</h3>
+                            <p>This round was particularly demanding compared to previous years. Instead of a single month-long challenge, we faced four weekly challenges with increasing difficulty. These challenges required studying the Grokking Bitcoin book and applying Bitcoin development concepts.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>Round 3: Organization Selection & Proposals</h3>
+                            <p>After clearing the technical challenges, we had to select organizations, make contributions, and submit project proposals. This round tested both our technical abilities and our communication skills with mentors.</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3>Round 2: Technical Challenges</h3>
-                        <p>This round was particularly demanding compared to previous years. Instead of a single month-long challenge, we faced four weekly challenges with increasing difficulty. These challenges required studying the Grokking Bitcoin book and applying Bitcoin development concepts.</p>
-                    </div>
+               
+                <h3>Weekly Challenges Overview</h3>
+               
+                <div class="challenge-item">
+                    <h3>Week 1: Interacting with a Bitcoin Node</h3>
+                    <p>Learning to use Bitcoin Core's RPC to interact with a running Bitcoin node, creating and broadcasting transactions.</p>
                 </div>
-                
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3>Round 3: Organization Selection & Proposals</h3>
-                        <p>After clearing the technical challenges, we had to select organizations, make contributions, and submit project proposals. This round tested both our technical abilities and our communication skills with mentors.</p>
-                    </div>
+               
+                <div class="challenge-item">
+                    <h3>Week 2: Building a P2SH-P2WSH Multisig Transaction</h3>
+                    <p>Creating signed P2SH-P2WSH multisig transactions, calculating sighashes, and computing ECDSA signatures.</p>
                 </div>
-            </div>
-            
-            <h3>Weekly Challenges Overview</h3>
-            
-            <div class="challenge-item">
-                <h3>Week 1: Interacting with a Bitcoin Node</h3>
-                <p>Learning to use Bitcoin Core's RPC to interact with a running Bitcoin node, creating and broadcasting transactions.</p>
-            </div>
-            
-            <div class="challenge-item">
-                <h3>Week 2: Building a P2SH-P2WSH Multisig Transaction</h3>
-                <p>Creating signed P2SH-P2WSH multisig transactions, calculating sighashes, and computing ECDSA signatures.</p>
-            </div>
-            
-            <div class="challenge-item">
-                <h3>Week 3: Mining First Block</h3>
-                <p>Simulating the mining process, validating transactions, and successfully mining them into a block.</p>
-            </div>
-            
-            <div class="challenge-item">
-                <h3>Week 4: Parsing a Descriptor</h3>
-                <p>Generating addresses from descriptors and calculating total balances by fetching transaction data from Esplora.</p>
-            </div>
-            
-            <div class="highlight">
-                <p><strong>Fun fact:</strong> While simultaneously preparing for GSoC, I managed to complete all four challenges in just 3 days! It was a mix of hard work, luck, and assistance from LLMs (as I was new to Bitcoin development).</p>
-            </div>
-            <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
-        </section>
-        
-        <section id="proposal">
-            <h2><i class="fas fa-file-alt"></i> Organization Selection and Proposal Process</h2>
-            <p>After completing the challenges, the proposal round began. This year featured more organizations than previous years, which made the selection process both exciting and challenging.</p>
-            <p>It took me about 4-5 days to thoroughly review all available projects before making my decision. I ultimately chose <strong><a href="https://shopstr.store/" target="_blank">Shopstr</a></strong> - a Nostr-based marketplace client designed to enable private, peer-to-peer transactions using Bitcoin.</p>
-            
-            <h3>Why I Chose Shopstr:</h3>
-            <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li>The mentor, <a href="https://github.com/calvadev" target="_blank">calvadev</a>, was exceptionally helpful and responsive</li>
-                <li>I was able to establish a strong connection with the team</li>
-                <li>The mentor patiently answered my questions and provided valuable resources</li>
-                <li>The project aligned well with my technical interests and skill set</li>
-            </ul>
-            
-            <p>During the proposal period (approximately one month), I focused on making meaningful contributions to the project. I submitted around 4 pull requests for website enhancements, all of which were merged before the proposal deadline. This demonstrated my commitment and ability to contribute effectively to the project.</p>
-            
-            <p>For the proposal itself, I thoroughly studied all available resources and the codebase. I also completed a competency test for the project, going beyond the required tasks after discussing with my mentor. Before final submission, I sent my proposal to the mentor for a quick review. He liked my approach and suggested a minor change, which I implemented before submission.</p>
-            
-            <div class="quote">
-                <p>"May 5th was the date results were announced, and boom! My proposal got accepted!"</p>
-            </div>
-            <div class="bitcoin-symbol"><i class="fas fa-file-signature"></i></div>
-        </section>
-        
-        <section id="results">
-            <h2><i class="fas fa-trophy"></i> Final Results and Looking Ahead</h2>
-            <p>I'm thrilled to announce that my proposal for the Summer of Bitcoin program was accepted! This marks the beginning of an exciting 12-week journey where I'll be working closely with the Shopstr team to develop and enhance their Nostr-based marketplace client.</p>
-            
-            <div style="text-align: center; margin: 30px 0;">
-                <img src="images/acceptance_mail.jpg" alt="Summer of Bitcoin Acceptance Email" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
-                <p style="font-style: italic; margin-top: 10px; color: var(--secondary-color);">My Summer of Bitcoin acceptance email</p>
-            </div>
-            
-            <h3>My Project: Payment Escrow and Processing</h3>
-            <p>I'll be working on improving <a href="https://shopstr.store/" target="_blank">Shopstr's</a> payment and order processing system. Currently, Shopstr handles payments and orders manually, requiring buyers to trust merchants and merchants to be online to handle orders. My project aims to reduce risks associated with transacting with pseudonymous merchants while streamlining order processing.</p>
-            
-            <div class="challenge-item">
-                <h3>Expected Outcomes</h3>
-                <ul style="margin-left: 20px; margin-bottom: 10px;">
-                    <li>Implementing P2PK time-locked Cashu tokens or HODL invoices to hold funds until each party confirms the necessary spending conditions</li>
-                    <li>Creating a new UI to allow for the opening of disputes to be handled between the merchant and seller and an optional third-party</li>
-                    <li>Developing an automated processor acting on behalf of the merchant to confirm payments and process confirmation and shipping messages</li>
+               
+                <div class="challenge-item">
+                    <h3>Week 3: Mining First Block</h3>
+                    <p>Simulating the mining process, validating transactions, and successfully mining them into a block.</p>
+                </div>
+               
+                <div class="challenge-item">
+                    <h3>Week 4: Parsing a Descriptor</h3>
+                    <p>Generating addresses from descriptors and calculating total balances by fetching transaction data from Esplora.</p>
+                </div>
+               
+                <div class="highlight">
+                    <p><strong>Fun fact:</strong> While simultaneously preparing for GSoC, I managed to complete all four challenges in just 3 days! It was a mix of hard work, luck, and assistance from LLMs (as I was new to Bitcoin development).</p>
+                </div>
+                <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
+            </section>
+           
+            <section id="proposal">
+                <h2><i class="fas fa-file-alt"></i> Organization Selection and Proposal Process</h2>
+                <p>After completing the challenges, the proposal round began. This year featured more organizations than previous years, which made the selection process both exciting and challenging.</p>
+                <p>It took me about 4-5 days to thoroughly review all available projects before making my decision. I ultimately chose <strong><a href="https://shopstr.store/" target="_blank">Shopstr</a></strong> - a Nostr-based marketplace client designed to enable private, peer-to-peer transactions using Bitcoin.</p>
+               
+                <h3>Why I Chose Shopstr:</h3>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>The mentor, <a href="https://github.com/calvadev" target="_blank">calvadev</a>, was exceptionally helpful and responsive</li>
+                    <li>I was able to establish a strong connection with the team</li>
+                    <li>The mentor patiently answered my questions and provided valuable resources</li>
+                    <li>The project aligned well with my technical interests and skill set</li>
                 </ul>
-            </div>
-            
-            <div class="challenge-item">
-                <h3>Skills Required</h3>
-                <ul style="margin-left: 20px; margin-bottom: 10px;">
-                    <li>Next.js and TypeScript (preferred for type safety)</li>
-                    <li>Nostr (knowledge of event structure and relay communication)</li>
-                    <li>Cashu (understanding of minting and claiming)</li>
-                    <li>Lightning (generating and handling invoices)</li>
+               
+                <p>During the proposal period (approximately one month), I focused on making meaningful contributions to the project. I submitted around 4 pull requests for website enhancements, all of which were merged before the proposal deadline. This demonstrated my commitment and ability to contribute effectively to the project.</p>
+               
+                <p>For the proposal itself, I thoroughly studied all available resources and the codebase. I also completed a competency test for the project, going beyond the required tasks after discussing with my mentor. Before final submission, I sent my proposal to the mentor for a quick review. He liked my approach and suggested a minor change, which I implemented before submission.</p>
+               
+                <div class="quote">
+                    <p>"May 5th was the date results were announced, and boom! My proposal got accepted!"</p>
+                </div>
+                <div class="bitcoin-symbol"><i class="fas fa-file-signature"></i></div>
+            </section>
+           
+            <section id="results">
+                <h2><i class="fas fa-trophy"></i> Final Results and Looking Ahead</h2>
+                <p>I'm thrilled to announce that my proposal for the Summer of Bitcoin program was accepted! This marks the beginning of an exciting 12-week journey where I'll be working closely with the Shopstr team to develop and enhance their Nostr-based marketplace client.</p>
+               
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/acceptance_mail.jpg" alt="Summer of Bitcoin Acceptance Email" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
+                    <p class="image-caption">My Summer of Bitcoin acceptance email</p>
+                </div>
+               
+                <h3>My Project: Payment Escrow and Processing</h3>
+                <p>I'll be working on improving <a href="https://shopstr.store/" target="_blank">Shopstr's</a> payment and order processing system. Currently, Shopstr handles payments and orders manually, requiring buyers to trust merchants and merchants to be online to handle orders. My project aims to reduce risks associated with transacting with pseudonymous merchants while streamlining order processing.</p>
+               
+                <div class="challenge-item">
+                    <h3>Expected Outcomes</h3>
+                    <ul style="margin-left: 20px; margin-bottom: 10px;">
+                        <li>Implementing P2PK time-locked Cashu tokens or HODL invoices to hold funds until each party confirms the necessary spending conditions</li>
+                        <li>Creating a new UI to allow for the opening of disputes to be handled between the merchant and seller and an optional third-party</li>
+                        <li>Developing an automated processor acting on behalf of the merchant to confirm payments and process confirmation and shipping messages</li>
+                    </ul>
+                </div>
+               
+                <div class="challenge-item">
+                    <h3>Skills Required</h3>
+                    <ul style="margin-left: 70px; margin-bottom: 10px;">
+                        <li>Next.js and TypeScript (preferred for type safety)</li>
+                        <li>Nostr (knowledge of event structure and relay communication)</li>
+                        <li>Cashu (understanding of minting and claiming)</li>
+                        <li>Lightning (generating and handling invoices)</li>
+                    </ul>
+                </div>
+               
+                <p>This opportunity will allow me to:</p>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>Gain hands-on experience with Bitcoin development</li>
+                    <li>Contribute to a real-world project with real users</li>
+    <li>Work closely with experienced mentors like <a href="https://github.com/calvadev" target="_blank">calvadev</a></li>
+                    <li>Further develop my technical and collaboration skills</li>
                 </ul>
-            </div>
-            
-            <p>This opportunity will allow me to:</p>
-            <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li>Gain hands-on experience with Bitcoin development</li>
-                <li>Contribute to a real-world project with real users</li>
-                <li>Work closely with experienced mentors like <a href="https://github.com/calvadev" target="_blank">calvadev</a></li>
-                <li>Further develop my technical and collaboration skills</li>
-            </ul>
-            
-            <p>For those interested in learning more about my project or seeking guidance for future applications, check out these resources:</p>
-            
-            <div class="btn-group">
-                <a href="https://github.com/GautamBytes/SOB-ACCEPTED-PROPOSAL" class="btn" target="_blank">View My Accepted Proposal</a>
-                <a href="https://shopstr.store/" class="btn" target="_blank">Visit Shopstr</a>
-                <a href="https://www.summerofbitcoin.org/" class="btn" target="_blank">Summer of Bitcoin</a>
-            </div>
-            
-            <div class="highlight">
-                <h3>Advice for Future Applicants:</h3>
-                <p>If you're considering applying to Summer of Bitcoin in the future, here are a few tips from my experience:</p>
-                <ul style="margin-left: 20px;">
-                    <li>Start early and familiarize yourself with Bitcoin concepts</li>
-                    <li>Be proactive in making contributions to your chosen organization</li>
-                    <li>Establish clear communication with potential mentors</li>
-                    <li>Focus on quality rather than quantity in your contributions</li>
-                    <li>Craft a detailed and well-thought-out proposal</li>
+               
+                <p>For those interested in learning more about my project or seeking guidance for future applications, check out these resources:</p>
+               
+                <div class="btn-group">
+                    <a
+
+ href="https://github.com/GautamBytes/SOB-ACCEPTED-PROPOSAL" class="btn" target="_blank">View My Accepted Proposal</a>
+                    <a href="https://shopstr.store/" class="btn" target="_blank">Visit Shopstr</a>
+                    <a href="https://www.summerofbitcoin.org/" class="btn" target="_blank">Summer of Bitcoin</a>
+                </div>
+               
+                <div class="highlight">
+                    <h3>Advice for Future Applicants:</h3>
+                    <p>If you're considering applying to Summer of Bitcoin in the future,Jimmy here are a few tips from my experience:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Start early and familiarize yourself with Bitcoin concepts</li>
+                        <li>Be proactive in making contributions to your chosen organization</li>
+                        <li>Establish clear communication with potential mentors</li>
+                        <li>Focus on quality rather than quantity in your contributions</li>
+                        <li>Craft a detailed and well-thought-out proposal</li>
+                    </ul>
+                </div>
+                <div class="bitcoin-symbol"><i class="fas fa-award"></i></div>
+            </section>
+        </div>
+
+        <div id="midterm" class="tab-content">
+            <section id="midterm-intro">
+                <h2><i class="fas fa-clock"></i> Diving into the Internship: Mid-Term Reflections</h2>
+                <p>With the acceptance email still fresh in my inbox, I embarked on my 12-week adventure with Shopstr. The first half was a whirlwind of learning, coding, and overcoming hurdles in Bitcoin's intricate world. Under the guidance of my mentor calvadev, I focused on building the foundation for secure, trustless payments—starting with P2PK time-locked Cashu tokens and an automated processor for payment and shipping confirmations.</p>
+                <p>The project kicked off smoothly, but as a newcomer to Cashu and Nostr protocols, I faced my share of struggles. Debugging mint support for NUT-11 extensions and ensuring seamless integration with Next.js took late nights and plenty of trial-and-error. Yet, these challenges were rewarding, teaching me the nuances of cryptographic escrow and real-time event handling.</p>
+                <div class="bitcoin-symbol"><i class="fab fa-bitcoin"></i></div>
+            </section>
+
+            <section id="midterm-p2pk">
+                <h2><i class="fas fa-lock"></i> Implementing P2PK Time-Locked Cashu Escrow</h2>
+                <p>The core security upgrade in Shopstr’s new payment flow centers on leveraging Cashu’s P2PK (Pay-to-PubKey) time-locked tokens. Previously, buyers had to trust that sellers would deliver after payment, with no cryptographic guarantees. My implementation adds a 2-of-3 multisig escrow, using Cashu’s NUT-11 extension, to hold funds securely until transaction conditions are met.</p>
+                <p>To implement P2PK time-locked Cashu tokens as payment escrow in Shopstr, I focused on enabling both trustless order processing and automated dispute resolution. Traditionally, Shopstr required buyers to trust merchants directly, but my approach leverages Cashu’s P2PK (Pay-to-Pubkey) time-lock feature (NUT-11) to enforce escrow at the protocol level.</p>
+                <p>First, I extended merchant profiles with a P2PK configuration—adding fields like enabled, pubkey, locktime, and refund pubkeys. This allows each shop to opt-in to time-locked payments, specifying a lock period and refund recipients.</p>
+                <p>In the payment flow, when a buyer checks out, the app dynamically detects if the seller supports P2PK. If enabled, it builds the payment with the merchant’s public key, locktime, and refund keys. The Cashu mint’s info is checked for NUT-11 support (“Mint does not support P2PK (NUT-11)”), and payments are sent using the wallet’s send function with a p2pk parameter.</p>
+                <h3>How it Works:</h3>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>When a buyer pays, the app checks if the selected mint supports NUT-11 (P2PK). If not, the transaction is rejected (if (!mintInfo.nuts?.["11"]?.supported) { throw new Error("Cashu mint does not support P2PK escrow (NUT-11)"); }).</li>
+                    <li>The payment splits tokens using the wallet.send call and attaches P2PK options:
+                        <ul style="margin-left: 20px;">
+                            <li>pubkey: Seller’s pubkey.</li>
+                            <li>locktime: Optional time-lock, so funds can be refunded if stuck.</li>
+                            <li>refundKeys: Includes both the buyer’s and any fallback pubkeys.</li>
+                            <li>pubkeys: Always includes the buyer, seller, and a designated arbiter (from environment: ARBITER_PUBKEY).</li>
+                            <li>nSigs: Set to 2, requiring any two signatures to spend, enforcing “2-of-3” multisig.</li>
+                        </ul>
+                    </li>
                 </ul>
-            </div>
-            <div class="bitcoin-symbol"><i class="fas fa-award"></i></div>
-        </section>
-        
+                <p>Code example:</p><pre><code>const p2pkOptions = {
+  pubkey: p2pk.pubkey,
+  locktime: p2pk.locktime,
+  refundKeys: [...(p2pk.refund || []), buyerPubkey],
+  sigflag: tags.find((t) => t[0] === "sigflag")?.[1] || "SIG_ALL",
+  nSigs: 2,
+  pubkeys: [buyerPubkey, ARBITER_PUBKEY]
+}
+</code></pre>
+                <p>This ensures that the funds can only be unlocked with signatures from two of the three parties, drastically reducing risk for both buyer and seller. If the seller is unresponsive, buyer and arbiter can refund; if the buyer is malicious, seller and arbiter can release; and after timeout, the buyer alone may reclaim.</p>
+                <p>UI updates provide clear “ Locked for X days” indicators for buyers, and a refund button is available if the lock expires and funds are not claimed, automating buyer protection.</p>
+                <p>This approach minimizes trust requirements, automates order handling, and sets the groundwork for dispute resolution by holding funds securely until conditions are met or refunds are triggered.</p>
+                <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
+            </section>
+
+            <section id="midterm-automated">
+                <h2><i class="fas fa-robot"></i> Automated Payment and Shipping Confirmation Processor</h2>
+                <p>For my Summer of Bitcoin internship, I implemented an Automated Payment and Shipping Confirmation Processor for Shopstr to address manual order processing and trust issues between buyers and pseudonymous merchants. Traditionally, payments and order updates required merchant intervention, introducing risk and delays.</p>
+                <p>Approach: I introduced automation by leveraging the Nostr protocol for encrypted direct messaging. Upon successful payment, Shopstr now triggers a function (sendPaymentConfirmationMessage) that sends a digitally signed payment confirmation DM directly to the buyer’s Nostr pubkey, using the merchant’s key for authenticity. This function is invoked automatically after invoice or Cashu payment success, looping through each product in a cart or single product order, and includes vital details like order ID and payment amount.</p>
+                <p>Similarly, after the merchant ships the order, a separate function (sendShippingConfirmationMessage) automatically notifies the buyer with shipping confirmation over Nostr DM. Both functions wrap the event securely using ephemeral keys and encrypt the message before dispatch, ensuring privacy.</p>
+                <p>React components (CartInvoiceCard, ProductInvoiceCard, and Listing) handle state and trigger these messages automatically based on payment or shipping status, removing the need for manual merchant involvement.</p>
+                <p>Outcome: This approach automates order communication, reduces buyer risk, and sets the stage for integrating P2PK time-locked tokens or HODL invoices for escrow. It also lays the groundwork for future dispute resolution UIs, making Shopstr safer and more efficient for Bitcoin commerce.</p>
+                <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
+            </section>
+
+            <section id="midterm-results">
+                <h2><i class="fas fa-check-circle"></i> Mid-Term Milestone and Learnings</h2>
+                <p>Passing the mid-term evaluation was a huge boost! It validated my progress and motivated me for the second half. I learned invaluable lessons in Bitcoin-native commerce, from minimizing trust with cryptography to automating workflows in decentralized apps.</p>
+               
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/midterm_result.jpg" alt="Summer of Bitcoin Mid-Term Evaluation Email" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
+                    <p class="image-caption">My mid-term evaluation congratulations email</p>
+                    <img src="images/stipend_midterm.jpg" alt="Knock Knock BTC Here Email" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
+                    <p class="image-caption">Knock knock, BTC here!</p>
+                </div>
+
+                <p>Check out my contributions:</p>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li><a href="https://github.com/shopstr-eng/shopstr/pull/152" target="_blank">Added P2PK Time-Locked Cashu Tokens - midterm</a></li>
+                    <li><a href="https://github.com/shopstr-eng/shopstr/pull/155" target="_blank">Automated Payment and Shipping Confirmation Processor - midterm</a></li>
+                </ul>
+
+                <div class="quote">
+                    <p>"Halfway through, and Shopstr is already more secure—excited for disputes and testing ahead!"</p>
+                </div>
+                <div class="bitcoin-symbol"><i class="fas fa-award"></i></div>
+            </section>
+        </div>
+
+        <div id="final" class="tab-content">
+            <section id="final-intro">
+                <h2><i class="fas fa-flag-checkered"></i> Wrapping Up: Final Evaluation and Reflections</h2>
+                <p>As the internship entered its final stretch, the momentum from mid-term propelled me forward. The momentum from escrow and automation carried into building user-facing resolution tools and ensuring code reliability. Struggles persisted—like handling encrypted chat sorting and edge-case testing—but collaboration with calvadev turned them into triumphs.</p>
+                <p>This phase deepened my appreciation for Bitcoin's potential in e-commerce, blending cryptography with intuitive UIs for a seamless experience.</p>
+                <div class="bitcoin-symbol"><i class="fab fa-bitcoin"></i></div>
+            </section>
+
+            <section id="final-dispute">
+                <h2><i class="fas fa-gavel"></i> Dispute UI and Workflow</h2>
+                <p>To complement cryptographic escrow, I built a full-featured Dispute UI to provide both transparency and recourse in the case of issues like non-delivery or fraud.</p>
+                <h3>Key Features and Flow:</h3>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li><strong>Opening Disputes:</strong> After purchase, buyers see an “Open a Dispute” button. Triggering this posts a Nostr event tagged to buyer, seller, and arbiter, with the order ID and reason.</li>
+                    <li><strong>Tracking Disputes:</strong> A dedicated “Disputes” tab in the UI lists all disputes involving the user. Each entry shows the order, parties, status, and the latest message.</li>
+                    <li><strong>Dispute Chat:</strong> Clicking a dispute opens a secure chat, implemented using NIP-59 (gift-wrap) encrypted Nostr messages. All parties can communicate, with messages sorted and decrypted in the client.</li>
+                    <li><strong>Arbiter Controls:</strong> If a case can’t be resolved amicably, the arbiter can “Rule for Buyer” or “Rule for Seller.” This triggers the partial signing of the escrowed tokens (using the arbiter’s Schnorr signature) and delivers the result to the winner for redemption. The UI disables further actions and updates the status.</li>
+                    <li><strong>Status Publishing:</strong> Each resolution is posted as a Nostr event (kind: 30007), so all clients update the dispute’s status in real time.</li>
+                </ul>
+                <p>Code Example for Dispute Activation:</p><pre><code>await activateDispute(nostr, signer, productData.d!, reason, userPubkey, productData.pubkey)
+</code></pre>
+                <p>Code Example for Arbiter Ruling:</p><pre><code>const { inputs, signatures } = await createPartialRedemption(dispute.escrowToken, signer)
+</code></pre>
+                <p>Summary: By combining P2PK time-locked multisig with a rich Nostr-based dispute system, I built a workflow that minimizes trust, gives users clear recourse, and keeps all interactions cryptographically verifiable and censorship-resistant. This approach strengthens Shopstr’s security and user experience for Bitcoin-native commerce.</p>
+                <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
+            </section>
+
+            <section id="final-testing">
+                <h2><i class="fas fa-check-square"></i> Boosting Codebase Reliability with Test Coverage</h2>
+                <p>For my Summer of Bitcoin internship, I boosted our codebase’s reliability by setting up test coverage using Jest and React Testing Library. I configured Jest for Next.js, added essential test scripts, and wrote unit tests for our custom hooks like useNavigation and useTabs. These tests ensured our navigation and tab logic worked correctly across different scenarios. This process made our codebase more robust and maintainable for future development.</p>
+                <div class="bitcoin-symbol"><i class="fas fa-laptop-code"></i></div>
+            </section
+
+            <section id="final-results">
+                <h2><i class="fas fa-trophy"></i> Journey's End: Outcomes and Gratitude</h2>
+                <p>Completing the final evaluation felt surreal—a complainant to growth from Bitcoin novice to contributor. Shopstr now boasts trustless payments, automated processes, and dispute handling, all while being more reliable thanks to tests. This internship honed my skills in Next.js, Nostr, Cashu, and Lightning, and taught me the power of open-source collaboration.</p>
+               
+сию
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/stipend_email.jpg" alt="Stipend Payment Email" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
+                    <p class="image-caption">Stipend confirmation email</p>
+                </div>
+
+                <p>Explore my final contributions:</p>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li><a href="https://github.com/shopstr-eng/shopstr/pull/159" target="_blank">Dispute UI - final term</a></li>
+                    <li><a href="https://github.com/shopstr-eng/shopstr/pull/164" target="_blank">Test Coverage - final term</a
+
+</a></li>
+                    <li><a href="https://github.com/shopstr-eng/shopstr/pull/161" target="_blank">Test Coverage - final term</a></li>
+                    <li><a href="https://github.com/shopstr-eng/shopstr/pull/163" target="_blank">Test Coverage - final term</a></li>
+                </ul>
+
+                <div class="quote">
+                    <p>"From selection to stipend, this journey was transformative—grateful to Summer of Bitcoin and Shopstr!"</p>
+                </div>
+                <div class="bitcoin-symbol"><i class="fas fa-award"></i></div>
+            </section>
+        </div>
+
+        <div id="goodies" class="tab-content">
+            <section id="goodies-received">
+                <h2><i class="fas fa-gift"></i> Internship Goodies: A Bitcoin Surprise!</h2>
+                <p>Woohoo! As a delightful bonus for my Summer of Bitcoin internship, I received an awesome hardware wallet and some cool Bitcoin-themed goodies, all for free! This thoughtful gesture from the SoB team made the journey even more rewarding, giving me tools to securely dive deeper into the Bitcoin ecosystem.</p>
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/hardware_wallet.jpg" alt="Summer of Bitcoin Hardware Wallet" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
+                    <p class="image-caption">My Summer of Bitcoin Hardware Wallet</p>
+                    <a href="https://x.com/GautamM96/status/1955236915042492900" class="btn" target="_blank">See Hardware Wallet Post on X</a>
+                </div>
+                <div style="text-align: center; margin: 30px 0;">
+                    <img src="images/goodies.jpg" alt="Bitcoin-Themed Goodies" style="max-width: 100%; border-radius: 8px; box-shadow: var(--box-shadow);">
+                    <p class="image-caption">Bitcoin-Themed Goodies from Summer of Bitcoin</p>
+                    <a href="https://x.com/GautamM96/status/1950627979345662391" class="btn" target="_blank">See Goodies Post on X</a>
+                </div>
+                <div class="bitcoin-symbol"><i class="fas fa-wallet"></i></div>
+            </section>
+        </div>
+
         <footer>
             <p>© 2025 Gautam Manchandani | <a href="https://www.summerofbitcoin.org/" target="_blank">Summer of Bitcoin</a> Participant</p>
             <div class="social-links">
@@ -639,22 +891,22 @@
         </footer>
     </div>
 
-    <!-- Dark mode toggle script -->
+    <!-- Scripts -->
     <script>
         const darkModeToggle = document.getElementById('dark-mode-toggle');
         const body = document.body;
         const icon = darkModeToggle.querySelector('i');
-        
+       
         // Check for saved theme preference
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark-mode');
             icon.classList.remove('fa-moon');
             icon.classList.add('fa-sun');
         }
-        
+       
         darkModeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            
+           
             // Save preference to localStorage
             if (body.classList.contains('dark-mode')) {
                 localStorage.setItem('darkMode', 'enabled');
@@ -667,10 +919,28 @@
             }
         });
 
-        // Add floating animation to Bitcoin symbols for extra funkiness
+        // Tab switching function
+        function openTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-button');
+            
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            const targetTab = document.getElementById(tabName);
+            targetTab.classList.add('active');
+            document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
+        }
+
+        // Add floating animation to Bitcoin symbols
         const bitcoinSymbols = document.querySelectorAll('.bitcoin-symbol');
         bitcoinSymbols.forEach((symbol, index) => {
-            symbol.style.animationDelay = `${index * 2}s`;
+            symbol.style.animation = `float 6s ease-in-out infinite ${index * 2}s`;
         });
     </script>
 </body>
